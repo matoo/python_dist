@@ -1,4 +1,5 @@
 # Create setup.py file in packages root directory
+```
 cat <<EOS > package_dir/setup.py
 #!/usr/bin/env python3
 
@@ -21,8 +22,10 @@ setup(
   packages=find_packages(),
 )
 EOS
-
+```
 # Build Distributions
+```
 python3 setup.py bdist --format=zip
 echo '#!/usr/bin/env python3' | cat -  dist/package_name > where_to_install/app_name
 chmod u+x where_to_install/app_name
+```
